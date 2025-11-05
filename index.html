@@ -4,37 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Godfrey Bwalya - Software Engineer | Full-Stack Developer & Cloud Enthusiast</title>
+    <title>Godfrey Bwalya - Systems Engineer | Cloud Infrastructure & Full-Stack Developer</title>
 
     <!-- SEO Meta Tags -->
     <meta name="description"
-        content="Godfrey Bwalya - Software Engineer specializing in full-stack development, cloud computing, and innovative solutions. View my portfolio, projects, and professional experience.">
+        content="Godfrey Bwalya - Systems Engineer specializing in cloud infrastructure, full-stack development, and innovative solutions. View my portfolio, projects, and professional experience.">
     <meta name="keywords"
-        content="Godfrey Bwalya, software engineer, full-stack developer, React.js, Node.js, cloud computing, AWS, Google Cloud, web development, Zambia">
+        content="Godfrey Bwalya, systems engineer, cloud engineer, infrastructure engineer, full-stack developer, React.js, Node.js, cloud computing, AWS, Google Cloud, Zambia, Linux, networking">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Godfrey Bwalya">
-    <link rel="canonical" href="https://godfreybwalya.com">
+    <link rel="canonical" href="https://my-portfolio-webs-coral.vercel.app/">
 
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Godfrey Bwalya - Software Engineer">
+    <meta property="og:title" content="Godfrey Bwalya - Systems Engineer">
     <meta property="og:description"
-        content="Passionate software engineer with expertise in full-stack development and cloud computing">
-    <meta property="og:image" content="https://godfreybwalya.com/images/og-image.jpg">
-    <meta property="og:url" content="https://godfreybwalya.com">
+        content="Passionate systems engineer with expertise in cloud infrastructure, full-stack development, and system architecture">
+    <meta property="og:image"
+        content="https://res.cloudinary.com/dc8majybh/image/upload/v1762366482/godfrey-bwalya-og-image_bbbagj.png">
+    <meta property="og:url" content="https://my-portfolio-webs-coral.vercel.app/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Godfrey Bwalya Portfolio">
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Godfrey Bwalya - Software Engineer">
+    <meta name="twitter:title" content="Godfrey Bwalya - Systems Engineer">
     <meta name="twitter:description"
-        content="Passionate software engineer with expertise in full-stack development and cloud computing">
-    <meta name="twitter:image" content="https://godfreybwalya.com/images/twitter-image.jpg">
+        content="Passionate systems engineer with expertise in cloud infrastructure and full-stack development">
+    <meta name="twitter:image"
+        content="https://res.cloudinary.com/dc8majybh/image/upload/v1762366430/godfrey-bwalya-twitter-image_oprfya.png">
+
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 
     <!-- Preconnect for External Resources -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
@@ -48,42 +52,35 @@
 
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Godfrey Bwalya",
-      "jobTitle": "Software Engineer",
-      "url": "https://godfreybwalya.com",
-      "sameAs": [
-        "https://www.linkedin.com/in/godfrey-bwalya-875890271",
-        "https://github.com/godfreybwalya"
-      ],
-      "knowsAbout": [
-        "Software Engineering",
-        "Full-Stack Development",
-        "Cloud Computing",
-        "React.js",
-        "Node.js"
-      ],
-      "alumniOf": {
-        "@type": "EducationalOrganization",
-        "name": "University of Zambia"
-      },
-      "worksFor": {
-        "@type": "Organization",
-        "name": "BlueCode Systems"
-      }
-    }
-    </script>
-
-    <!-- Content Security Policy -->
-    <!-- <meta http-equiv="Content-Security-Policy"
-    content="default-src 'self'; 
-    script-src 'self' 'unsafe-inline' https://polyfill.io; 
-    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; 
-    font-src 'self' https://fonts.gstatic.com; 
-    img-src 'self' data: https://picsum.photos; 
-    form-action 'self' https://formspree.io;"> -->
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Godfrey Bwalya",
+  "jobTitle": "Systems Engineer",  <!-- Change this -->
+  "url": "https://my-portfolio-webs-coral.vercel.app",
+  "sameAs": [
+    "https://www.linkedin.com/in/godfrey-bwalya-875890271",
+    "https://github.com/Godfrey-cyber23"
+  ],
+  "knowsAbout": [
+    "Systems Engineering",
+    "Cloud Infrastructure",
+    "Full-Stack Development",
+    "React.js",
+    "Node.js",
+    "AWS",
+    "Google Cloud"
+  ],
+  "alumniOf": {
+    "@type": "EducationalOrganization",
+    "name": "University of Zambia"
+  },
+  "worksFor": {
+    "@type": "Organization",
+    "name": "BlueCode Systems"
+  }
+}
+</script>
 
     <style>
         /* Base Styles */
@@ -115,6 +112,13 @@
             background-color: var(--bg-color);
             overflow-x: hidden;
         }
+
+        /* Make sure all links are clickable */
+        a {
+            pointer-events: auto !important;
+            cursor: pointer !important;
+        }
+
 
         /* Skip Link for Accessibility */
         .skip-link {
@@ -236,7 +240,7 @@
             justify-content: center;
             text-align: center;
             color: white;
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://picsum.photos/seed/tech-background/1600/900.jpg') no-repeat center center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://picsum.photos/seed/tech-background/1600/900.jpg') no-repeat center center/cover;
             padding-top: 80px;
             position: relative;
             overflow: hidden;
@@ -458,7 +462,6 @@
             }
         }
 
-
         /* Image Loading Styles */
         .image-container {
             position: relative;
@@ -467,6 +470,7 @@
 
         .image-container img {
             transition: opacity 0.3s ease;
+            border-radius: 10px;
         }
 
         .image-container.loading img {
@@ -499,6 +503,7 @@
         img[loading="lazy"] {
             opacity: 0;
             transition: opacity 0.3s ease;
+            border-radius: 10px;
         }
 
         img[loading="lazy"].loaded {
@@ -868,6 +873,7 @@
             background: var(--gradient-primary);
         }
 
+
         .certification-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
@@ -884,6 +890,7 @@
             height: 100%;
             object-fit: cover;
             transition: var(--transition);
+            border-radius: 10px;
         }
 
         .certification-card:hover .certification-image img {
@@ -928,11 +935,21 @@
             font-weight: 600;
             text-decoration: none;
             transition: var(--transition);
+            cursor: pointer;
+            position: relative;
+            z-index: 10;
+            pointer-events: auto !important;
         }
 
         .certification-link i {
             margin-left: 0.5rem;
             transition: var(--transition);
+
+        }
+
+        .certification-link:hover {
+            color: var(--accent-color);
+            text-decoration: underline;
         }
 
         .certification-link:hover i {
@@ -985,6 +1002,7 @@
             height: 100%;
             object-fit: cover;
             transition: var(--transition);
+            border-radius: 10px;
         }
 
         .project-card:hover .project-image img {
@@ -1136,6 +1154,7 @@
         .contact::before {
             content: '';
             position: fixed;
+            pointer-events: none;
             top: 0;
             left: 0;
             width: 100%;
@@ -1301,17 +1320,30 @@
             background-color: var(--primary-color);
         }
 
+        .about-text,
+        .skills-category,
+        .timeline-content,
+        .certification-content,
+        .project-content,
+        .testimonial-text,
+        .contact-info p,
         .footer-section p {
-            margin-bottom: 1rem;
-            color: rgba(255, 255, 255, 0.7);
+            -webkit-user-select: text;
+            -moz-user-select: text;
+            -ms-user-select: text;
+            user-select: text;
         }
+
 
         .footer-links {
             list-style: none;
+            display: flex;
+            flex-wrap: wrap;
         }
 
         .footer-links li {
             margin-bottom: 0.8rem;
+            width: 50%;
         }
 
         .footer-links a {
@@ -1577,6 +1609,18 @@
             .footer-section {
                 padding-right: 0;
             }
+
+            .about-text h3 {
+                font-size: 1.5rem;
+            }
+
+            .about-text p {
+                text-align: center;
+            }
+
+            .project-content h3 {
+                font-size: 1.1rem;
+            }
         }
 
         @media (max-width: 576px) {
@@ -1594,6 +1638,50 @@
 
             .certifications-container {
                 grid-template-columns: 1fr;
+            }
+
+            .timeline {
+                position: relative;
+                max-width: 1000px;
+                margin: 0 auto;
+            }
+
+            .timeline::after {
+                display: none;
+            }
+
+            .timeline-item {
+                padding: 10px 20px;
+                position: relative;
+                background-color: inherit;
+                width: 100%;
+                margin-bottom: 20px;
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 0.5s ease, transform 0.5s ease;
+            }
+
+            .timeline-item.visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            .timeline-item::after {
+                display: none;
+            }
+
+            .left,
+            .right {
+                left: 0;
+            }
+
+            .timeline-content {
+                padding: 15px 20px;
+                background-color: white;
+                position: relative;
+                border-radius: 15px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+                border-left: 4px solid var(--primary-color);
             }
         }
 
@@ -1654,6 +1742,14 @@
         body[data-theme="dark"] .testimonial-card {
             background-color: #2a2a2a;
         }
+
+        body[data-theme="dark"] nav ul {
+            background-color: #1a1a2e;
+        }
+
+        body[data-theme="dark"] footer {
+            background-color: #1a1a2e;
+        }
     </style>
 </head>
 
@@ -1690,14 +1786,16 @@
 
     <!-- Floating Social Icons -->
     <div class="floating-social">
-        <a href="https://www.linkedin.com/in/godfrey-bwalya-875890271" target="_blank" title="LinkedIn"
+        <a href="https://www.linkedin.com/in/godfrey-bwalya-875890271" rel="noopener" target="_blank" title="LinkedIn"
             aria-label="LinkedIn Profile">
             <i class="fab fa-linkedin-in"></i>
         </a>
-        <a href="https://github.com/godfreybwalya" target="_blank" title="GitHub" aria-label="GitHub Profile">
+        <a href="https://github.com/godfreybwalya" rel="noopener" target="_blank" title="GitHub"
+            aria-label="GitHub Profile">
             <i class="fab fa-github"></i>
         </a>
-        <a href="https://twitter.com/godfreybwalya" target="_blank" title="Twitter" aria-label="Twitter Profile">
+        <a href="https://twitter.com/godfreybwalya" rel="noopener" target="_blank" title="Twitter"
+            aria-label="Twitter Profile">
             <i class="fab fa-twitter"></i>
         </a>
     </div>
@@ -1730,22 +1828,22 @@
             <div class="container">
                 <div class="section-title">
                     <h2>About Me</h2>
-                    <p>Passionate software engineer with expertise in full-stack development and cloud computing</p>
+                    <p>Passionate systems engineer with expertise in full-stack development and cloud computing</p>
                 </div>
                 <div class="about-content">
                     <div class="about-image">
                         <img src="https://res.cloudinary.com/dc8majybh/image/upload/v1762315832/IMG_1532_yzcaln.jpg"
-                            alt="Godfrey Bwalya - Software Engineer" loading="lazy">
+                            alt="Godfrey Bwalya - Systems Engineer" loading="lazy">
                     </div>
                     <div class="about-text">
-                        <h3>Software Engineer & Cloud Enthusiast</h3>
-                        <p>I'm a passionate software engineer currently completing my Bachelor's degree in Computer
+                        <h3>Systems Engineer & Cloud Specialist</h3>
+                        <p>I'm a passionate systems engineer currently completing my Bachelor's degree in Computer
                             Science at the University of Zambia. With experience as a Software Engineer Intern at
-                            BlueCode Systems, I specialize in creating innovative solutions that bridge the gap between
-                            user needs and technical implementation.</p>
-                        <p>My expertise includes full-stack development with React.js and Node.js, cloud computing with
-                            AWS and Google Cloud, and building responsive, user-centered applications. I'm particularly
-                            interested in the intersection of software development and cloud infrastructure.</p>
+                            BlueCode Systems, I specialize in building robust infrastructure solutions that bridge
+                            development and operations.</p>
+                        <p>My expertise includes cloud infrastructure with AWS and Google Cloud, full-stack development
+                            with React.js and Node.js, and designing scalable system architectures. I'm particularly
+                            interested in the intersection of infrastructure automation and cloud computing.</p>
                         <ul class="info-list">
                             <li><i class="fas fa-map-marker-alt"></i> Makeni Bonaventure Area, Lusaka, Zambia</li>
                             <li><i class="fas fa-graduation-cap"></i> BSc in Computer Science, University of Zambia
@@ -2101,7 +2199,7 @@
                     <p>Professional certifications and continuous learning achievements</p>
                 </div>
                 <div class="certifications-container">
-                    <!-- Certification 1 -->
+                    <!-- Certification 1 - AWS -->
                     <div class="certification-card">
                         <div class="certification-image">
                             <img src="https://res.cloudinary.com/dc8majybh/image/upload/v1762315831/AWS-Academy-Graduate-AWS-Academy-Cloud-Foundations_s6qffq.png"
@@ -2115,12 +2213,12 @@
                                 <i class="fas fa-calendar-alt"></i> Issued: 2025
                             </div>
                             <a href="https://www.credly.com/badges/de1dd9e9-1c0c-472a-9cad-d5325befa34d/public_url"
-                                class="certification-link">Verify Credential <i
-                                    class="fas fa-external-link-alt"></i></a>
+                                class="certification-link" target="_blank" rel="noopener noreferrer">Verify Credential
+                                <i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
 
-                    <!-- Certification 2 -->
+                    <!-- Certification 2 - Google Cloud -->
                     <div class="certification-card">
                         <div class="certification-image">
                             <img src="https://res.cloudinary.com/dc8majybh/image/upload/v1762315832/CloudCertificate_mren1f.png"
@@ -2134,12 +2232,12 @@
                                 <i class="fas fa-calendar-alt"></i> Issued: 2025
                             </div>
                             <a href="https://www.credly.com/badges/52782c2d-904d-47fd-a26d-6c9691e966d8/public_url"
-                                class="certification-link">Verify Credential <i
-                                    class="fas fa-external-link-alt"></i></a>
+                                class="certification-link" target="_blank" rel="noopener noreferrer">Verify Credential
+                                <i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
 
-                    <!-- Certification 5 -->
+                    <!-- Certification 3 - Digital Marketing -->
                     <div class="certification-card">
                         <div class="certification-image">
                             <img src="https://res.cloudinary.com/dc8majybh/image/upload/v1762316396/Digital_Marketing_Certificate_z1eqhz.jpg"
@@ -2152,69 +2250,52 @@
                             <div class="certification-date">
                                 <i class="fas fa-calendar-alt"></i> Issued: 2025
                             </div>
-                            <a href="#" class="certification-link">Verify Credential <i
+                            <a href="https://www.linkedin.com/in/godfrey-bwalya-875890271/details/certifications/"
+                                class="certification-link" target="_blank" rel="noopener noreferrer">View on LinkedIn <i
                                     class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
 
+                    <!-- Certification 4 - Cybersecurity -->
                     <div class="certification-card">
                         <div class="certification-image">
                             <img src="https://res.cloudinary.com/dc8majybh/image/upload/v1762317984/3238cb92-a540-4d77-a190-dc0c63533c28.png"
                                 alt="Cybersecurity Fundamentals Certificate" loading="lazy">
-                            <div class="certification-badge">
-                                <i class="fas fa-shield-alt"></i>
-                            </div>
                         </div>
                         <div class="certification-content">
                             <h3>Cybersecurity Fundamentals Certificate</h3>
                             <p>Foundational certification covering essential cybersecurity principles, threat landscape,
                                 security protocols, and best practices for protecting digital assets and infrastructure.
                             </p>
-                            <div class="certification-skills">
-                                <span class="skill-tag">Security Principles</span>
-                                <span class="skill-tag">Threat Analysis</span>
-                                <span class="skill-tag">Network Security</span>
-                                <span class="skill-tag">Risk Management</span>
-                                <span class="skill-tag">Security Protocols</span>
-                            </div>
                             <div class="certification-date">
                                 <i class="fas fa-calendar-alt"></i> Issued: 2025
                             </div>
                             <a href="https://www.skills.google/public_profiles/fe16fb51-f226-4f64-a6a6-172189ef45df/badges/19529014"
-                                class="certification-link">Verify Credential <i
-                                    class="fas fa-external-link-alt"></i></a>
+                                class="certification-link" target="_blank" rel="noopener noreferrer">Verify Credential
+                                <i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
 
+                    <!-- Certification 5 - Data Analytics -->
                     <div class="certification-card">
                         <div class="certification-image">
                             <img src="https://res.cloudinary.com/dc8majybh/image/upload/v1762317778/ff513490-0a13-4afc-9d3a-44edde58c7d7.png"
                                 alt="Data Analytics Certificate Course" loading="lazy">
-                            <div class="certification-badge">
-                                <i class="fas fa-chart-bar"></i>
-                            </div>
                         </div>
                         <div class="certification-content">
                             <h3>Data Analytics Certificate Course</h3>
                             <p>Comprehensive certification covering data analysis techniques, statistical methods, data
                                 visualization, and insights generation using modern analytics tools and platforms.</p>
-                            <div class="certification-skills">
-                                <span class="skill-tag">Data Analysis</span>
-                                <span class="skill-tag">Statistics</span>
-                                <span class="skill-tag">Data Visualization</span>
-                                <span class="skill-tag">Excel/Sheets</span>
-                                <span class="skill-tag">Insights Generation</span>
-                            </div>
                             <div class="certification-date">
                                 <i class="fas fa-calendar-alt"></i> Issued: 2023
                             </div>
                             <a href="https://www.skills.google/public_profiles/fe16fb51-f226-4f64-a6a6-172189ef45df/badges/19536991"
-                                class="certification-link">Verify Credential <i
-                                    class="fas fa-external-link-alt"></i></a>
+                                class="certification-link" target="_blank" rel="noopener noreferrer">Verify Credential
+                                <i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
 
-                    <!-- Certification 3 -->
+                    <!-- Certification 6 - CCNA -->
                     <div class="certification-card">
                         <div class="certification-image">
                             <img src="https://res.cloudinary.com/dc8majybh/image/upload/v1762315833/CCNA-_Introduction_to_Networks_certificate_lymo13.jpg"
@@ -2228,12 +2309,12 @@
                                 <i class="fas fa-calendar-alt"></i> Issued: 2024
                             </div>
                             <a href="https://www.credly.com/badges/8ba3d8bd-53ea-4a2e-b608-bf6fd8102790/public_url"
-                                class="certification-link">Verify Credential <i
-                                    class="fas fa-external-link-alt"></i></a>
+                                class="certification-link" target="_blank" rel="noopener noreferrer">Verify Credential
+                                <i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
 
-                    <!-- Certification 4 -->
+                    <!-- Certification 7 - IT Essentials -->
                     <div class="certification-card">
                         <div class="certification-image">
                             <img src="https://res.cloudinary.com/dc8majybh/image/upload/v1762315833/IT_Essentials_certificate_kqo3dx.jpg"
@@ -2247,66 +2328,53 @@
                                 <i class="fas fa-calendar-alt"></i> Issued: 2023
                             </div>
                             <a href="https://www.credly.com/badges/de7add0f-60e9-4255-88e3-1b34cb837f9e/public_url"
-                                class="certification-link">Verify Credential <i
-                                    class="fas fa-external-link-alt"></i></a>
+                                class="certification-link" target="_blank" rel="noopener noreferrer">Verify Credential
+                                <i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
 
+                    <!-- Certification 8 - NDG Linux Essentials -->
                     <div class="certification-card">
                         <div class="certification-image">
                             <img src="https://res.cloudinary.com/dc8majybh/image/upload/v1762315837/ndg_linux_iou3dx.jpg"
                                 alt="NDG Linux Essentials" loading="lazy">
-                            <div class="certification-badge">
-                                <i class="fab fa-linux"></i>
-                            </div>
                         </div>
                         <div class="certification-content">
                             <h3>NDG Linux Essentials</h3>
                             <p>Comprehensive certification validating foundational Linux knowledge including command
                                 line operations, file systems, user administration, permissions management, and basic
                                 shell scripting.</p>
-                            <div class="certification-skills">
-                                <span class="skill-tag">Command Line</span>
-                                <span class="skill-tag">File Systems</span>
-                                <span class="skill-tag">User Management</span>
-                                <span class="skill-tag">Permissions</span>
-                                <span class="skill-tag">Shell Scripting</span>
-                            </div>
                             <div class="certification-date">
                                 <i class="fas fa-calendar-alt"></i> Issued: 2023
                             </div>
-
-                        </div>
-                        <div class="certification-card">
+                            <a href="https://www.linkedin.com/in/godfrey-bwalya-875890271/details/certifications/"
+                                class="certification-link" target="_blank" rel="noopener noreferrer">View on LinkedIn <i
+                                    class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
+
+                    <!-- Certification 9 - NDG Linux Unhatched -->
                     <div class="certification-card">
                         <div class="certification-image">
                             <img src="https://res.cloudinary.com/dc8majybh/image/upload/v1762317279/Partner-_NDG_Linux_Unhatched_certificate_Page_01_Snapshot_02_pqxeug.png"
                                 alt="NDG Linux Unhatched" loading="lazy">
-                            <div class="certification-badge">
-                                <i class="fas fa-egg"></i>
-                            </div>
                         </div>
                         <div class="certification-content">
                             <h3>NDG Linux Unhatched</h3>
                             <p>Introductory certification providing fundamental Linux concepts and hands-on experience
                                 with basic command line operations, file navigation, and essential system administration
                                 tasks.</p>
-                            <div class="certification-skills">
-                                <span class="skill-tag">Linux Basics</span>
-                                <span class="skill-tag">Command Line</span>
-                                <span class="skill-tag">File Navigation</span>
-                                <span class="skill-tag">System Fundamentals</span>
-                            </div>
                             <div class="certification-date">
                                 <i class="fas fa-calendar-alt"></i> Issued: 2023
                             </div>
+                            <a href="https://www.linkedin.com/in/godfrey-bwalya-875890271/details/certifications/"
+                                class="certification-link" target="_blank" rel="noopener noreferrer">View on LinkedIn <i
+                                    class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                 </div>
+            </div>
         </section>
-
         <!-- Projects Section -->
         <section id="projects" class="projects">
             <div class="container">
@@ -2481,29 +2549,24 @@
                 <div class="testimonials-container">
                     <!-- Testimonial 1 -->
                     <div class="testimonial-card">
-    <p class="testimonial-text">"Working with Godfrey on our final year project was an incredible
-        experience. His technical expertise in full-stack development and his ability to architect
-        complex systems were outstanding. He took the lead on implementing the role-based access
-        control and database design, ensuring our project met all security and functionality
-        requirements. Godfrey's dedication and problem-solving skills were key to our project's
-        success."</p>
-    <div class="testimonial-author">
-        <img src="https://res.cloudinary.com/dc8majybh/image/upload/w_100,h_100,c_fill/v1762322381/pic2_jvzpjq.jpg" 
-            width="100" height="100" 
-            alt="Blessings Chuulu - Final Year Project Colleague" 
-            loading="lazy">
-        <div class="author-info">
-            <h4>Blessings Chuulu</h4>
-            <p>Final Year Project Colleague, UNZA</p>
-        </div>
-    </div>
-</div>
+                        <p class="testimonial-text">"Working with Godfrey on our final year project was an incredible
+                            experience. His technical expertise in full-stack development and his ability to architect
+                            complex systems were outstanding."</p>
+                        <div class="testimonial-author">
+                            <img src="https://res.cloudinary.com/dc8majybh/image/upload/w_100,h_100,c_fill/v1762322381/pic2_jvzpjq.jpg"
+                                width="100" height="100" alt="Blessings Chuulu - Final Year Project Colleague"
+                                loading="lazy">
+                            <div class="author-info">
+                                <h4>Blessings Chuulu</h4>
+                                <p>Final Year Project Colleague, UNZA</p>
+                            </div>
+                        </div>
+                    </div>
                     <!-- Testimonial 2 -->
                     <div class="testimonial-card">
                         <p class="testimonial-text">"I worked with Godfrey on a challenging project that required both
                             frontend and backend expertise. His attention to detail and commitment to code quality made
-                            him an invaluable team member. He consistently delivered high-quality work and was always
-                            willing to help others."</p>
+                            him an invaluable team member."</p>
                         <div class="testimonial-author">
                             <img src="https://picsum.photos/seed/colleague-portrait/100/100.jpg"
                                 alt="Sarah J. Phiri - Senior Developer" loading="lazy">
@@ -2518,8 +2581,7 @@
                     <div class="testimonial-card">
                         <p class="testimonial-text">"Godfrey's expertise in React.js and Node.js was instrumental in the
                             success of our project. He has a natural talent for creating intuitive user interfaces and
-                            robust backend systems. His positive attitude and strong work ethic make him a pleasure to
-                            work with."</p>
+                            robust backend systems."</p>
                         <div class="testimonial-author">
                             <img src="https://picsum.photos/seed/client-portrait/100/100.jpg"
                                 alt="David L. Chanda - Project Manager" loading="lazy">
@@ -2608,18 +2670,18 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>About Me</h3>
-                    <p>I'm a passionate software engineer with expertise in full-stack development and cloud computing.
-                        I specialize in creating innovative solutions that bridge the gap between user needs and
-                        technical implementation.</p>
+                    <p>I'm a passionate systems engineer with expertise in cloud infrastructure and full-stack
+                        development. I specialize in creating robust solutions that bridge the gap between development
+                        and operations.</p>
                     <div class="social-links">
                         <a href="https://www.linkedin.com/in/godfrey-bwalya-875890271" rel="noopener" target="_blank"
                             aria-label="LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://github.com/Godfrey-cyber23" rel="noopener" target="_blank" aria-label="GitHub Profile"><i
-                                class="fab fa-github"></i></a>
-                        <a href="https://x.com/@Primetech_01" rel="noopener" target="_blank" aria-label="Twitter Profile"><i
-                                class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/primetech_02/" rel="noopener" target="_blank" aria-label="Instagram Profile"><i
-                                class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/Godfrey-cyber23" rel="noopener" target="_blank"
+                            aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
+                        <a href="https://x.com/@Primetech_01" rel="noopener" target="_blank"
+                            aria-label="Twitter Profile"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/primetech_02/" rel="noopener" target="_blank"
+                            aria-label="Instagram Profile"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="footer-section">
@@ -2641,8 +2703,8 @@
                         <li><a href="mailto:godfrey.bwalya@cs.unza.zm"><i class="fas fa-envelope"></i>
                                 godfrey.bwalya@cs.unza.zm</a></li>
                         <li><a href="tel:+260975755276"><i class="fas fa-phone"></i> +260 975755276</a></li>
-                        <li><a href="https://www.linkedin.com/in/godfrey-bwalya-875890271" rel="noopener" target="_blank"><i
-                                    class="fab fa-linkedin"></i> LinkedIn Profile</a></li>
+                        <li><a href="https://www.linkedin.com/in/godfrey-bwalya-875890271" rel="noopener"
+                                target="_blank"><i class="fab fa-linkedin"></i> LinkedIn Profile</a></li>
                     </ul>
                 </div>
             </div>
@@ -2696,9 +2758,9 @@
         function initTypingEffect() {
             const typedTextElement = document.getElementById('typed-text');
             const texts = [
-                'Software Engineer',
+                'Systems Engineer',
+                'Cloud Infrastructure Specialist',
                 'Full-Stack Developer',
-                'Cloud Enthusiast',
                 'Problem Solver'
             ];
             let textIndex = 0;
@@ -3000,7 +3062,6 @@
             }
         }
 
-
         // Feature detection
         (function () {
             // Check for required features
@@ -3156,9 +3217,16 @@
             const images = document.querySelectorAll('img[loading="lazy"]');
 
             images.forEach(img => {
+                // Only process images that aren't already in a container
+                if (img.parentNode.classList && img.parentNode.classList.contains('image-container')) {
+                    return; // Skip if already in a container
+                }
+
                 // Create container for spinner
                 const container = document.createElement('div');
                 container.className = 'image-container loading';
+
+                // Insert container before the image and move image into container
                 img.parentNode.insertBefore(container, img);
                 container.appendChild(img);
 
@@ -3168,11 +3236,19 @@
                 container.appendChild(spinner);
 
                 // Handle image load
-                img.addEventListener('load', () => {
+                if (img.complete) {
                     container.classList.remove('loading');
                     container.classList.add('loaded');
                     img.classList.add('loaded');
-                });
+                    spinner.remove();
+                } else {
+                    img.addEventListener('load', () => {
+                        container.classList.remove('loading');
+                        container.classList.add('loaded');
+                        img.classList.add('loaded');
+                        spinner.remove();
+                    });
+                }
 
                 // Handle image error
                 img.addEventListener('error', () => {
@@ -3187,7 +3263,9 @@
                         entries.forEach(entry => {
                             if (entry.isIntersecting) {
                                 const img = entry.target;
-                                img.src = img.dataset.src;
+                                if (img.dataset.src) {
+                                    img.src = img.dataset.src;
+                                }
                                 observer.unobserve(img);
                             }
                         });
@@ -3359,6 +3437,9 @@
                     }
                 });
             });
+
+
+
 
             // Close modal
             closeModal.addEventListener('click', () => {
