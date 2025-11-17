@@ -25,6 +25,16 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Godfrey Bwalya Portfolio">
 
+
+    <meta http-equiv="Content-Security-Policy" 
+      content="default-src 'self'; 
+               script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com; 
+               style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; 
+               img-src 'self' data: https://res.cloudinary.com https://picsum.photos https://fastly.picsum.photos https://tse2.mm.bing.net; 
+               font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; 
+               connect-src 'self' https://formspree.io;
+               manifest-src 'self' https://res.cloudinary.com;">
+               
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Godfrey Bwalya - Systems Engineer">
@@ -3581,9 +3591,15 @@
         function initSmoothScrolling() {
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
+                    const targetId = this.getAttribute('href');
+
+                    // Skip if it's just a hash (#) with no specific target
+                    if (targetId === '#' || !targetId) {
+                        return;
+                    }
+
                     e.preventDefault();
 
-                    const targetId = this.getAttribute('href');
                     const targetElement = document.querySelector(targetId);
 
                     if (targetElement) {
@@ -4144,6 +4160,10 @@
             });
         }
 
+        function sanitizeHTML(dirty) {
+    return DOMPurify.sanitize(dirty);
+}
+
         // Back to top button
         function initBackToTop() {
             const backToTopButton = document.getElementById('backToTop');
@@ -4277,20 +4297,20 @@
 
         // Modal functionality
         // Modal functionality
-        function initModal() {
-            const modal = document.getElementById('project-modal');
-            const modalTitle = document.getElementById('modal-title');
-            const modalContent = document.getElementById('modal-content');
-            const closeModal = document.querySelector('.close-modal');
+function initModal() {
+    const modal = document.getElementById('project-modal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalContent = document.getElementById('modal-content');
+    const closeModal = document.querySelector('.close-modal');
 
-            // Project details data
-            const projects = {
-                'program-management': {
-                    title: 'Program Management Platform',
-                    content: `
+    // Project details data
+    const projects = {
+        'program-management': {
+            title: 'Program Management Platform',
+            content: `
                 <div class="project-details">
                     <h3>BlueCode Systems - ACHIEVE & ECAP+ Projects</h3>
-                    <p>A comprehensive program management platform designed to enhance case management systems with improved user experience and data accessibility.</p>
+                    <p>A comprehensive program Management platform designed to enhance case management systems with improved user experience and data accessibility.</p>
                     
                     <h4>Key Features Implemented:</h4>
                     <ul>
@@ -4308,10 +4328,10 @@
                     <p>The enhanced platform significantly improved user experience by making data more accessible and easier to analyze. The export feature enabled stakeholders to perform offline analysis, while the improved filtering system reduced time spent searching for specific information.</p>
                 </div>
             `
-                },
-                'literacy-tree': {
-                    title: 'Literacy Tree School Website',
-                    content: `
+        },
+        'literacy-tree': {
+            title: 'Literacy Tree School Website',
+            content: `
                 <div class="project-details">
                     <h3>Full-Stack School Management Platform</h3>
                     <p>A comprehensive school management platform with role-based access control, admin dashboard, and responsive design for academic and administrative workflows.</p>
@@ -4332,10 +4352,10 @@
                     <p>The platform streamlined school operations by digitizing administrative processes, improving communication between staff and parents, and providing a centralized system for managing student information and academic records.</p>
                 </div>
             `
-                },
-                'arduino-smart-house': {
-                    title: 'Arduino Smart House System',
-                    content: `
+        },
+        'arduino-smart-house': {
+            title: 'Arduino Smart House System',
+            content: `
                 <div class="project-details">
                     <h3>IoT-Based Home Automation System</h3>
                     <p>An IoT-based home automation system with remote monitoring and control capabilities for enhanced living convenience and energy efficiency.</p>
@@ -4356,10 +4376,10 @@
                     <p>The system significantly improved home energy efficiency through automated controls and provided enhanced security features. Users reported increased convenience and reduced utility costs after implementation.</p>
                 </div>
             `
-                },
-                'iot-light-control': {
-                    title: 'IoT Light Bulb Control System',
-                    content: `
+        },
+        'iot-light-control': {
+            title: 'IoT Light Bulb Control System',
+            content: `
                 <div class="project-details">
                     <h3>Smart Lighting Solution</h3>
                     <p>A smart lighting solution with remote control, scheduling, and energy monitoring capabilities for modern smart homes.</p>
@@ -4380,10 +4400,10 @@
                     <p>The system provided users with convenient control over their home lighting while offering energy savings through scheduling and monitoring features. The customizable lighting options enhanced home ambiance and user experience.</p>
                 </div>
             `
-                },
-                'beowulf-cluster': {
-                    title: 'Beowulf Cluster',
-                    content: `
+        },
+        'beowulf-cluster': {
+            title: 'Beowulf Cluster',
+            content: `
                 <div class="project-details">
                     <h3>High-Performance Computing Cluster</h3>
                     <p>A high-performance computing cluster built from commodity hardware for parallel processing and distributed computing tasks.</p>
@@ -4404,10 +4424,10 @@
                     <p>The cluster provided significant computational power for research and data processing tasks at a fraction of the cost of commercial supercomputers. It enabled parallel processing of large datasets and complex simulations.</p>
                 </div>
             `
-                },
-                'exam-security-system': {
-                    title: 'Exam Security System',
-                    content: `
+        },
+        'exam-security-system': {
+            title: 'Exam Security System',
+            content: `
                 <div class="project-details">
                     <h3>Multi-Factor Authentication for Examinations</h3>
                     <p>A multi-factor authentication system combining facial recognition and RFID verification to prevent student impersonation during examinations with real-time monitoring.</p>
@@ -4428,53 +4448,54 @@
                     <p>The system significantly reduced cases of student impersonation during examinations, enhancing the integrity of the assessment process. It provided invigilators with real-time alerts and comprehensive monitoring capabilities.</p>
                 </div>
             `
-                }
-            };
-
-
-            // Add event listeners to project buttons
-            document.querySelectorAll('.project-details-btn').forEach(button => {
-                button.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const projectId = button.dataset.project;
-                    const project = projects[projectId];
-
-                    if (project) {
-                        modalTitle.textContent = project.title;
-                        modalContent.innerHTML = project.content;
-                        modal.classList.add('show');
-                        document.body.style.overflow = 'hidden';
-                    }
-                });
-            });
-
-            // Close modal
-            if (closeModal) {
-                closeModal.addEventListener('click', () => {
-                    modal.classList.remove('show');
-                    document.body.style.overflow = 'auto';
-                });
-            }
-
-            // Close modal when clicking outside content
-            if (modal) {
-                modal.addEventListener('click', (e) => {
-                    if (e.target === modal) {
-                        modal.classList.remove('show');
-                        document.body.style.overflow = 'auto';
-                    }
-                });
-            }
-
-            // Close modal with Escape key
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && modal.classList.contains('show')) {
-                    modal.classList.remove('show');
-                    document.body.style.overflow = 'auto';
-                }
-            });
         }
+    };
+
+    // Add event listeners to project buttons
+    document.querySelectorAll('.project-details-btn').forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            const projectId = button.dataset.projectId; // Fixed: was button.dataset.project
+            const project = projects[projectId];
+
+            if (project) {
+                modalTitle.textContent = project.title;
+                modalContent.innerHTML = project.content;
+                modal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+        });
+    });
+
+    // Close modal
+    if (closeModal) {
+        closeModal.addEventListener('click', () => {
+            modal.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        });
+    }
+
+    // Close modal when clicking outside content
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        });
+    }
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('show')) {
+            modal.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        }
+    });
+}
     </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.3/purify.min.js"></script>
 </body>
 
 </html>
