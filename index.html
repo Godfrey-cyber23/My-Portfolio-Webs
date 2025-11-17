@@ -1793,7 +1793,7 @@
             color: var(--light-text);
         }
 
-         body[data-theme="dark"] .contact .container .section-title p {
+        body[data-theme="dark"] .contact .container .section-title p {
             color: white;
         }
 
@@ -2691,8 +2691,8 @@
                             frontend and backend expertise. His attention to detail and commitment to code quality made
                             him an invaluable team member."</p>
                         <div class="testimonial-author">
-                            <img src="placeholder.webp"
-                                alt="Temwani Banda - Software Engineering Graduate - Unza" loading="lazy">
+                            <img src="placeholder.webp" alt="Temwani Banda - Software Engineering Graduate - Unza"
+                                loading="lazy">
                             <div class="author-info">
                                 <h4>Temwani Banda</h4>
                                 <p>Software Engineering Graduate - Unza</p>
@@ -2706,8 +2706,7 @@
                             success of our project. He has a natural talent for creating intuitive user interfaces and
                             robust backend systems."</p>
                         <div class="testimonial-author">
-                            <img src="placeholder.webp"
-                                alt="David L. Chanda - Project Manager" loading="lazy">
+                            <img src="placeholder.webp" alt="David L. Chanda - Project Manager" loading="lazy">
                             <div class="author-info">
                                 <h4>David L. Chanda</h4>
                                 <p>Project Manager, Digital Solutions Ltd</p>
@@ -3448,6 +3447,7 @@
         }
 
         // Modal functionality
+        // Modal functionality
         function initModal() {
             const modal = document.getElementById('project-modal');
             const modalTitle = document.getElementById('modal-title');
@@ -3459,89 +3459,146 @@
                 'program-management': {
                     title: 'Program Management Platform',
                     content: `
-                        <div class="project-details">
-                            <h3>BlueCode Systems - ACHIEVE & ECAP+ Projects</h3>
-                            <p>A comprehensive program management platform designed to enhance case management systems with improved user experience and data accessibility.</p>
-                            
-                            <h4>Key Features Implemented:</h4>
-                            <ul>
-                                <li>Enhanced filtering functionality for improved data presentation</li>
-                                <li>CSV export feature for offline data analysis and reporting</li>
-                                <li>Optimized data retrieval and display across multiple modules</li>
-                                <li>Seamless integration between React.js frontend and Node.js backend</li>
-                                <li>Directus API integration for efficient data management</li>
-                            </ul>
-                            
-                            <h4>Technical Implementation:</h4>
-                            <p>Leveraged the JAM Stack architecture with React.js for the frontend, Node.js for backend services, and Directus as the headless CMS. Implemented efficient data handling patterns to ensure optimal performance even with large datasets.</p>
-                            
-                            <h4>Impact:</h4>
-                            <p>The enhanced platform significantly improved user experience by making data more accessible and easier to analyze. The export feature enabled stakeholders to perform offline analysis, while the improved filtering system reduced time spent searching for specific information.</p>
-                        </div>
-                    `
+                <div class="project-details">
+                    <h3>BlueCode Systems - ACHIEVE & ECAP+ Projects</h3>
+                    <p>A comprehensive program management platform designed to enhance case management systems with improved user experience and data accessibility.</p>
+                    
+                    <h4>Key Features Implemented:</h4>
+                    <ul>
+                        <li>Enhanced filtering functionality for improved data presentation</li>
+                        <li>CSV export feature for offline data analysis and reporting</li>
+                        <li>Optimized data retrieval and display across multiple modules</li>
+                        <li>Seamless integration between React.js frontend and Node.js backend</li>
+                        <li>Directus API integration for efficient data management</li>
+                    </ul>
+                    
+                    <h4>Technical Implementation:</h4>
+                    <p>Leveraged the JAM Stack architecture with React.js for the frontend, Node.js for backend services, and Directus as the headless CMS. Implemented efficient data handling patterns to ensure optimal performance even with large datasets.</p>
+                    
+                    <h4>Impact:</h4>
+                    <p>The enhanced platform significantly improved user experience by making data more accessible and easier to analyze. The export feature enabled stakeholders to perform offline analysis, while the improved filtering system reduced time spent searching for specific information.</p>
+                </div>
+            `
                 },
-                'data-dashboard': {
-                    title: 'Data Visualization Dashboard',
+                'literacy-tree': {
+                    title: 'Literacy Tree School Website',
                     content: `
-                        <div class="project-details">
-                            <h3>Interactive Data Visualization Dashboard</h3>
-                            <p>A comprehensive dashboard for visualizing complex datasets with real-time updates and customizable views.</p>
-                            
-                            <h4>Key Features:</h4>
-                            <ul>
-                                <li>Real-time data updates with WebSocket connections</li>
-                                <li>Interactive charts and graphs using D3.js</li>
-                                <li>Customizable dashboard layouts</li>
-                                <li>Data filtering and date range selection</li>
-                                <li>Export functionality for charts and reports</li>
-                            </ul>
-                            
-                            <h4>Technical Implementation:</h4>
-                            <p>Built with React.js for the frontend, Node.js for the backend API, and D3.js for data visualization. Implemented WebSocket connections for real-time data updates and used Redux for state management.</p>
-                        </div>
-                    `
+                <div class="project-details">
+                    <h3>Full-Stack School Management Platform</h3>
+                    <p>A comprehensive school management platform with role-based access control, admin dashboard, and responsive design for academic and administrative workflows.</p>
+                    
+                    <h4>Key Features Implemented:</h4>
+                    <ul>
+                        <li>Role-based access control system for admins, staff, and parents</li>
+                        <li>Comprehensive admin dashboard for admissions, academics, and financial management</li>
+                        <li>Responsive mobile-first interface with Progressive Web App features</li>
+                        <li>Dynamic public-facing website with admissions forms and photo galleries</li>
+                        <li>Dynamic notifications system for staff-parent communication</li>
+                    </ul>
+                    
+                    <h4>Technical Implementation:</h4>
+                    <p>Built with React.js for the frontend, Node.js for the backend API, and RESTful API design. Implemented JWT authentication for secure access control and used a responsive design approach to ensure compatibility across devices.</p>
+                    
+                    <h4>Impact:</h4>
+                    <p>The platform streamlined school operations by digitizing administrative processes, improving communication between staff and parents, and providing a centralized system for managing student information and academic records.</p>
+                </div>
+            `
                 },
-                'rbac-system': {
-                    title: 'Role-Based Access Control System',
+                'arduino-smart-house': {
+                    title: 'Arduino Smart House System',
                     content: `
-                        <div class="project-details">
-                            <h3>Enterprise-Grade RBAC System</h3>
-                            <p>A secure authentication and authorization system with granular permission management for enterprise applications.</p>
-                            
-                            <h4>Key Features:</h4>
-                            <ul>
-                                <li>JWT-based authentication with refresh tokens</li>
-                                <li>Granular role and permission management</li>
-                                <li>Resource-based access control</li>
-                                <li>Audit logging for security events</li>
-                                <li>Multi-factor authentication support</li>
-                            </ul>
-                            
-                            <h4>Technical Implementation:</h4>
-                            <p>Implemented using Node.js with Express.js for the backend API, MongoDB for data storage, and JSON Web Tokens for secure authentication. Used bcrypt for password hashing and implemented comprehensive security measures.</p>
-                        </div>
-                    `
+                <div class="project-details">
+                    <h3>IoT-Based Home Automation System</h3>
+                    <p>An IoT-based home automation system with remote monitoring and control capabilities for enhanced living convenience and energy efficiency.</p>
+                    
+                    <h4>Key Features Implemented:</h4>
+                    <ul>
+                        <li>Remote control of home appliances via mobile application</li>
+                        <li>Automated lighting and temperature control systems</li>
+                        <li>Security monitoring with motion sensors and alerts</li>
+                        <li>Energy consumption tracking and optimization</li>
+                        <li>Voice control integration for hands-free operation</li>
+                    </ul>
+                    
+                    <h4>Technical Implementation:</h4>
+                    <p>Utilized Arduino microcontrollers for hardware control, with WiFi connectivity for remote access. Developed a companion mobile application for user interaction and implemented sensor networks for environmental monitoring.</p>
+                    
+                    <h4>Impact:</h4>
+                    <p>The system significantly improved home energy efficiency through automated controls and provided enhanced security features. Users reported increased convenience and reduced utility costs after implementation.</p>
+                </div>
+            `
                 },
-                'cloud-tool': {
-                    title: 'Cloud Deployment Tool',
+                'iot-light-control': {
+                    title: 'IoT Light Bulb Control System',
                     content: `
-                        <div class="project-details">
-                            <h3>Automated Cloud Deployment Pipeline</h3>
-                            <p>A tool for automating the deployment of containerized applications to AWS and Google Cloud platforms.</p>
-                            
-                            <h4>Key Features:</h4>
-                            <ul>
-                                <li>Support for Docker containerization</li>
-                                <li>Automated CI/CD pipeline integration</li>
-                                <li>Multi-cloud deployment support (AWS & Google Cloud)</li>
-                                <li>Configuration management</li>
-                                <li>Rollback capabilities</li>
-                            </ul>
-                            
-                            <h4>Technical Implementation:</h4>
-                            <p>Built with Node.js and integrated with cloud provider APIs. Used Docker for containerization and implemented deployment scripts for both AWS and Google Cloud platforms.</p>
-                        </div>
-                    `
+                <div class="project-details">
+                    <h3>Smart Lighting Solution</h3>
+                    <p>A smart lighting solution with remote control, scheduling, and energy monitoring capabilities for modern smart homes.</p>
+                    
+                    <h4>Key Features Implemented:</h4>
+                    <ul>
+                        <li>Remote control of lighting via mobile application</li>
+                        <li>Customizable scheduling for automatic lighting</li>
+                        <li>Energy consumption monitoring and reporting</li>
+                        <li>Integration with smart home assistants</li>
+                        <li>Color and brightness adjustment capabilities</li>
+                    </ul>
+                    
+                    <h4>Technical Implementation:</h4>
+                    <p>Implemented using ESP32 microcontrollers for smart bulb control, with MQTT protocol for communication. Developed a mobile application for user interface and integrated with cloud services for remote access and data storage.</p>
+                    
+                    <h4>Impact:</h4>
+                    <p>The system provided users with convenient control over their home lighting while offering energy savings through scheduling and monitoring features. The customizable lighting options enhanced home ambiance and user experience.</p>
+                </div>
+            `
+                },
+                'beowulf-cluster': {
+                    title: 'Beowulf Cluster',
+                    content: `
+                <div class="project-details">
+                    <h3>High-Performance Computing Cluster</h3>
+                    <p>A high-performance computing cluster built from commodity hardware for parallel processing and distributed computing tasks.</p>
+                    
+                    <h4>Key Features Implemented:</h4>
+                    <ul>
+                        <li>Parallel processing capabilities for computationally intensive tasks</li>
+                        <li>Load balancing across cluster nodes</li>
+                        <li>Job scheduling and resource management</li>
+                        <li>Fault tolerance and node failure recovery</li>
+                        <li>Performance monitoring and optimization tools</li>
+                    </ul>
+                    
+                    <h4>Technical Implementation:</h4>
+                    <p>Built using Linux-based nodes connected via high-speed network. Implemented MPI (Message Passing Interface) for inter-node communication and configured resource management software for efficient job distribution and execution.</p>
+                    
+                    <h4>Impact:</h4>
+                    <p>The cluster provided significant computational power for research and data processing tasks at a fraction of the cost of commercial supercomputers. It enabled parallel processing of large datasets and complex simulations.</p>
+                </div>
+            `
+                },
+                'exam-security-system': {
+                    title: 'Exam Security System',
+                    content: `
+                <div class="project-details">
+                    <h3>Multi-Factor Authentication for Examinations</h3>
+                    <p>A multi-factor authentication system combining facial recognition and RFID verification to prevent student impersonation during examinations with real-time monitoring.</p>
+                    
+                    <h4>Key Features Implemented:</h4>
+                    <ul>
+                        <li>Facial recognition using face-api.js for identity verification</li>
+                        <li>RFID card integration for additional authentication factor</li>
+                        <li>Real-time monitoring and alert system for exam invigilators</li>
+                        <li>Secure database for student identity records</li>
+                        <li>Admin dashboard for managing verification records</li>
+                    </ul>
+                    
+                    <h4>Technical Implementation:</h4>
+                    <p>Combined Arduino Mega for RFID reading with ESP32-CAM for facial recognition. Developed a React.js frontend with Node.js backend and AWS MySQL database for secure data storage and management.</p>
+                    
+                    <h4>Impact:</h4>
+                    <p>The system significantly reduced cases of student impersonation during examinations, enhancing the integrity of the assessment process. It provided invigilators with real-time alerts and comprehensive monitoring capabilities.</p>
+                </div>
+            `
                 }
             };
 
@@ -3560,9 +3617,6 @@
                     }
                 });
             });
-
-
-
 
             // Close modal
             closeModal.addEventListener('click', () => {
