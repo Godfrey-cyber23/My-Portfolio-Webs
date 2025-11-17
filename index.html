@@ -689,7 +689,8 @@
         }
 
         .skills-category h3 {
-            font-size: 1.5rem;
+
+            font-size: clamp(1.25rem, 4vw, 1.75rem);
             margin-bottom: 1.5rem;
             color: var(--secondary-color);
             display: flex;
@@ -1315,7 +1316,7 @@
             position: absolute;
             bottom: 0;
             left: 0;
-            width: 50px;
+            width: 150px;
             height: 2px;
             background-color: var(--primary-color);
         }
@@ -1709,8 +1710,16 @@
         }
 
         body[data-theme="dark"] .modal-content {
-            background-color: #1e1e1e;
+            background-color: #2a2a2a;
             color: var(--text-color);
+        }
+
+        body[data-theme="dark"] .close-modal {
+            color: var(--text-color);
+        }
+
+        body[data-theme="dark"] .close-modal:hover {
+            color: var(--primary-color);
         }
 
         body[data-theme="dark"] .form-group input,
@@ -1718,6 +1727,11 @@
             background-color: #2a2a2a;
             border-color: #444;
             color: var(--text-color);
+        }
+
+        body[data-theme="dark"] .form-group input::placeholder,
+        body[data-theme="dark"] .form-group textarea::placeholder {
+            color: rgba(255, 255, 255, 0.5);
         }
 
         body[data-theme="dark"] .theme-toggle {
@@ -1736,6 +1750,18 @@
             background-color: #1e1e1e;
         }
 
+        body[data-theme="dark"] .skills {
+            background-color: #121212;
+        }
+
+        body[data-theme="dark"] .certifications {
+            background-color: #121212;
+        }
+
+        body[data-theme="dark"] .testimonials {
+            background-color: #121212;
+        }
+
         body[data-theme="dark"] .skills-category,
         body[data-theme="dark"] .certification-card,
         body[data-theme="dark"] .project-card,
@@ -1747,8 +1773,92 @@
             background-color: #1a1a2e;
         }
 
+        body[data-theme="dark"] .skill-bar {
+            background-color: #444;
+        }
+
+        body[data-theme="dark"] nav ul li a {
+            color: #e0e0e0;
+        }
+
+        body[data-theme="dark"] nav ul li a:hover {
+            color: white;
+        }
+
+        body[data-theme="dark"] .section-title h2 {
+            color: var(--secondary-color);
+        }
+
+        body[data-theme="dark"] .section-title p {
+            color: var(--light-text);
+        }
+
+         body[data-theme="dark"] .contact .container .section-title p {
+            color: white;
+        }
+
         body[data-theme="dark"] footer {
             background-color: #1a1a2e;
+        }
+
+        body[data-theme="dark"] .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        body[data-theme="dark"] .footer-links a:hover {
+            color: white;
+        }
+
+        body[data-theme="dark"] nav ul li a::after {
+            background-color: var(--primary-color);
+        }
+
+        body[data-theme="dark"] .skill-name {
+            color: var(--secondary-color);
+        }
+
+        body[data-theme="dark"] .skill-level {
+            color: var(--light-text);
+        }
+
+        body[data-theme="dark"] .tag {
+            background-color: rgba(0, 171, 240, 0.2);
+            color: var(--primary-color);
+        }
+
+        body[data-theme="dark"] .testimonial-text {
+            color: var(--text-color);
+        }
+
+        /* Fix for Author Info in Dark Mode */
+        body[data-theme="dark"] .author-info h4 {
+            color: var(--secondary-color);
+        }
+
+        body[data-theme="dark"] .author-info p {
+            color: var(--light-text);
+        }
+
+        /* Fix for Experience Section in Dark Mode */
+        body[data-theme="dark"] .experience {
+            background-color: #1e1e1e;
+        }
+
+        body[data-theme="dark"] .timeline-content {
+            background-color: #2a2a2a;
+            color: var(--text-color);
+        }
+
+        body[data-theme="dark"] .timeline-content h3 {
+            color: var(--secondary-color);
+        }
+
+        body[data-theme="dark"] .timeline-content p {
+            color: var(--light-text);
+        }
+
+        body[data-theme="dark"] .timeline-content ul li {
+            color: var(--light-text);
         }
     </style>
 </head>
@@ -1764,7 +1874,7 @@
     <header>
         <div class="container">
             <nav>
-                <a href="#" class="logo"><i class="fas fa-code"></i> Godfrey Bwalya</a>
+                <a href="/" class="logo"><i class="fas fa-code"></i> Godfrey Bwalya</a>
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -1809,7 +1919,7 @@
         <i class="fas fa-cog gear gear-4" aria-hidden="true"></i>
 
         <div class="hero-content">
-            <h1>Godfrey Bwalya</h1>
+            <h1>Godfrey Bwalya's Portfolio</h1>
             <div class="typing-text">
                 <span id="typed-text"></span><span class="typing-cursor"></span>
             </div>
@@ -1960,6 +2070,19 @@
                             </div>
                             <div class="skill-bar">
                                 <div class="skill-progress" data-progress="65"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-category">
+                        <h3><i class="fas fa-database"></i> Databases</h3>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Firebase</span>
+                                <span class="skill-level">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
                             </div>
                         </div>
                         <div class="skill-item">
@@ -2568,11 +2691,11 @@
                             frontend and backend expertise. His attention to detail and commitment to code quality made
                             him an invaluable team member."</p>
                         <div class="testimonial-author">
-                            <img src="https://picsum.photos/seed/colleague-portrait/100/100.jpg"
-                                alt="Sarah J. Phiri - Senior Developer" loading="lazy">
+                            <img src="placeholder.webp"
+                                alt="Temwani Banda - Software Engineering Graduate - Unza" loading="lazy">
                             <div class="author-info">
-                                <h4>Sarah J. Phiri</h4>
-                                <p>Senior Developer, Tech Innovations</p>
+                                <h4>Temwani Banda</h4>
+                                <p>Software Engineering Graduate - Unza</p>
                             </div>
                         </div>
                     </div>
@@ -2583,7 +2706,7 @@
                             success of our project. He has a natural talent for creating intuitive user interfaces and
                             robust backend systems."</p>
                         <div class="testimonial-author">
-                            <img src="https://picsum.photos/seed/client-portrait/100/100.jpg"
+                            <img src="placeholder.webp"
                                 alt="David L. Chanda - Project Manager" loading="lazy">
                             <div class="author-info">
                                 <h4>David L. Chanda</h4>
@@ -2710,7 +2833,7 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; <span id="currentYear">2023</span> Godfrey Bwalya. All Rights Reserved. | Designed with <i
-                        class="fas fa-heart" style="color: #e74c3c;"></i> by Godfrey</p>
+                        class="fas fa-heart" style="color: #e74c3c;"></i> by <i>PRIMETECH DESIGNS</i> </p>
             </div>
         </div>
     </footer>
