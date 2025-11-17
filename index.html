@@ -35,10 +35,13 @@
 
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="https://res.cloudinary.com/dc8majybh/image/upload/v1763413949/apple-touch-icon_d8gog8.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="https://res.cloudinary.com/dc8majybh/image/upload/v1763413760/favicon-32x32_wumqdh.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="https://res.cloudinary.com/dc8majybh/image/upload/v1763413760/favicon-16x16_o2kbde.png">
+    <link rel="manifest" href="https://res.cloudinary.com/dc8majybh/raw/upload/v1763413962/site_z1mdtd.webmanifest">
 
     <!-- Preconnect for External Resources -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
@@ -46,7 +49,8 @@
     <link rel="preconnect" href="https://formspree.io">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
@@ -230,6 +234,108 @@
             background-color: white;
             margin: 3px 0;
             transition: var(--transition);
+        }
+
+        /* Certification Reactions */
+        .certification-reactions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .certification-reaction-buttons {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .certification-reaction-btn {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+            padding: 0.25rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .certification-reaction-btn:hover {
+            transform: scale(1.2);
+            background: rgba(0, 171, 240, 0.1);
+        }
+
+        .certification-reaction-btn.active {
+            animation: react-pop 0.3s ease;
+        }
+
+        .certification-reaction-btn.active::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 30px;
+            height: 30px;
+            border: 2px solid var(--primary-color);
+            border-radius: 50%;
+            animation: react-ring 0.6s ease;
+        }
+
+        .certification-reaction-count {
+            font-size: 0.85rem;
+            color: var(--light-text);
+            margin-left: 0.25rem;
+            font-weight: 600;
+        }
+
+        .certification-reaction-stats {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-left: auto;
+            font-size: 0.85rem;
+            color: var(--light-text);
+        }
+
+        .certification-reaction-total {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        /* Dark mode adjustments */
+        body[data-theme="dark"] .certification-reactions {
+            border-top-color: #444;
+        }
+
+        body[data-theme="dark"] .certification-reaction-btn:hover {
+            background: rgba(0, 171, 240, 0.2);
+        }
+
+        body[data-theme="dark"] .certification-reaction-count {
+            color: var(--light-text);
+        }
+
+        body[data-theme="dark"] .certification-reaction-stats {
+            color: var(--light-text);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .certification-reactions {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+
+            .certification-reaction-stats {
+                margin-left: 0;
+            }
         }
 
         /* Hero Section */
@@ -1022,10 +1128,12 @@
             justify-content: center;
             opacity: 0;
             transition: var(--transition);
+            pointer-events: none;
         }
 
         .project-card:hover .project-overlay {
             opacity: 1;
+            pointer-events: auto;
         }
 
         .project-overlay a {
@@ -1040,6 +1148,7 @@
             text-decoration: none;
             margin: 0 10px;
             transition: var(--transition);
+            pointer-events: auto;
         }
 
         .project-overlay a:hover {
@@ -1076,6 +1185,134 @@
             padding: 0.3rem 0.8rem;
             border-radius: 20px;
             font-size: 0.8rem;
+        }
+
+        /* Project Reactions */
+        .project-reactions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .reaction-buttons {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .reaction-btn {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+            padding: 0.25rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .reaction-btn:hover {
+            transform: scale(1.2);
+            background: rgba(0, 171, 240, 0.1);
+        }
+
+        .reaction-btn.active {
+            animation: react-pop 0.3s ease;
+        }
+
+        .reaction-btn.active::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 30px;
+            height: 30px;
+            border: 2px solid var(--primary-color);
+            border-radius: 50%;
+            animation: react-ring 0.6s ease;
+        }
+
+        @keyframes react-pop {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.3);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes react-ring {
+            0% {
+                transform: translate(-50%, -50%) scale(0.5);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translate(-50%, -50%) scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        .reaction-count {
+            font-size: 0.85rem;
+            color: var(--light-text);
+            margin-left: 0.25rem;
+            font-weight: 600;
+        }
+
+        .reaction-stats {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-left: auto;
+            font-size: 0.85rem;
+            color: var(--light-text);
+        }
+
+        .reaction-total {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        /* Dark mode adjustments */
+        body[data-theme="dark"] .project-reactions {
+            border-top-color: #444;
+        }
+
+        body[data-theme="dark"] .reaction-btn:hover {
+            background: rgba(0, 171, 240, 0.2);
+        }
+
+        body[data-theme="dark"] .reaction-count {
+            color: var(--light-text);
+        }
+
+        body[data-theme="dark"] .reaction-stats {
+            color: var(--light-text);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .project-reactions {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+
+            .reaction-stats {
+                margin-left: 0;
+            }
         }
 
         /* Testimonials Section */
@@ -1942,7 +2179,7 @@
                 </div>
                 <div class="about-content">
                     <div class="about-image">
-                        <img src="https://res.cloudinary.com/dc8majybh/image/upload/v1762315832/IMG_1532_yzcaln.jpg"
+                        <img src="https://res.cloudinary.com/dc8majybh/image/upload/v1763413761/image_mkjonm.jpg"
                             alt="Godfrey Bwalya - Systems Engineer" loading="lazy">
                     </div>
                     <div class="about-text">
@@ -2323,6 +2560,7 @@
                 </div>
                 <div class="certifications-container">
                     <!-- Certification 1 - AWS -->
+                    <!-- Certification 1 - AWS -->
                     <div class="certification-card">
                         <div class="certification-image">
                             <img src="https://res.cloudinary.com/dc8majybh/image/upload/v1762315831/AWS-Academy-Graduate-AWS-Academy-Cloud-Foundations_s6qffq.png"
@@ -2338,6 +2576,34 @@
                             <a href="https://www.credly.com/badges/de1dd9e9-1c0c-472a-9cad-d5325befa34d/public_url"
                                 class="certification-link" target="_blank" rel="noopener noreferrer">Verify Credential
                                 <i class="fas fa-external-link-alt"></i></a>
+                            <div class="certification-reactions" data-certification-id="aws-academy">
+                                <div class="certification-reaction-buttons">
+                                    <button class="certification-reaction-btn" data-reaction="like"
+                                        aria-label="Like this certification">
+                                        👍
+                                        <span class="certification-reaction-count">0</span>
+                                    </button>
+                                    <button class="certification-reaction-btn" data-reaction="love"
+                                        aria-label="Love this certification">
+                                        ❤️
+                                        <span class="certification-reaction-count">0</span>
+                                    </button>
+                                    <button class="certification-reaction-btn" data-reaction="wow"
+                                        aria-label="Amazing certification">
+                                        😮
+                                        <span class="certification-reaction-count">0</span>
+                                    </button>
+                                    <button class="certification-reaction-btn" data-reaction="rocket"
+                                        aria-label="Innovative certification">
+                                        🚀
+                                        <span class="certification-reaction-count">0</span>
+                                    </button>
+                                </div>
+                                <div class="certification-reaction-stats">
+                                    <span class="certification-reaction-total">0</span>
+                                    <span>reactions</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -2357,6 +2623,34 @@
                             <a href="https://www.credly.com/badges/52782c2d-904d-47fd-a26d-6c9691e966d8/public_url"
                                 class="certification-link" target="_blank" rel="noopener noreferrer">Verify Credential
                                 <i class="fas fa-external-link-alt"></i></a>
+                            <div class="certification-reactions" data-certification-id="google-cloud">
+                                <div class="certification-reaction-buttons">
+                                    <button class="certification-reaction-btn" data-reaction="like"
+                                        aria-label="Like this certification">
+                                        👍
+                                        <span class="certification-reaction-count">0</span>
+                                    </button>
+                                    <button class="certification-reaction-btn" data-reaction="love"
+                                        aria-label="Love this certification">
+                                        ❤️
+                                        <span class="certification-reaction-count">0</span>
+                                    </button>
+                                    <button class="certification-reaction-btn" data-reaction="wow"
+                                        aria-label="Amazing certification">
+                                        😮
+                                        <span class="certification-reaction-count">0</span>
+                                    </button>
+                                    <button class="certification-reaction-btn" data-reaction="rocket"
+                                        aria-label="Innovative certification">
+                                        🚀
+                                        <span class="certification-reaction-count">0</span>
+                                    </button>
+                                </div>
+                                <div class="certification-reaction-stats">
+                                    <span class="certification-reaction-total">0</span>
+                                    <span>reactions</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -2376,6 +2670,34 @@
                             <a href="https://www.linkedin.com/in/godfrey-bwalya-875890271/details/certifications/"
                                 class="certification-link" target="_blank" rel="noopener noreferrer">View on LinkedIn <i
                                     class="fas fa-external-link-alt"></i></a>
+                            <div class="certification-reactions" data-certification-id="digital-marketing">
+                                <div class="certification-reaction-buttons">
+                                    <button class="certification-reaction-btn" data-reaction="like"
+                                        aria-label="Like this certification">
+                                        👍
+                                        <span class="certification-reaction-count">0</span>
+                                    </button>
+                                    <button class="certification-reaction-btn" data-reaction="love"
+                                        aria-label="Love this certification">
+                                        ❤️
+                                        <span class="certification-reaction-count">0</span>
+                                    </button>
+                                    <button class="certification-reaction-btn" data-reaction="wow"
+                                        aria-label="Amazing certification">
+                                        😮
+                                        <span class="certification-reaction-count">0</span>
+                                    </button>
+                                    <button class="certification-reaction-btn" data-reaction="rocket"
+                                        aria-label="Innovative certification">
+                                        🚀
+                                        <span class="certification-reaction-count">0</span>
+                                    </button>
+                                </div>
+                                <div class="certification-reaction-stats">
+                                    <span class="certification-reaction-total">0</span>
+                                    <span>reactions</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -2396,6 +2718,34 @@
                             <a href="https://www.skills.google/public_profiles/fe16fb51-f226-4f64-a6a6-172189ef45df/badges/19529014"
                                 class="certification-link" target="_blank" rel="noopener noreferrer">Verify Credential
                                 <i class="fas fa-external-link-alt"></i></a>
+                            <div class="certification-reactions" data-certification-id="cybersecurity">
+                                <div class="certification-reaction-buttons">
+                                    <button class="certification-reaction-btn" data-reaction="like"
+                                        aria-label="Like this certification">
+                                        👍
+                                        <span class="certification-reaction-count">0</span>
+                                    </button>
+                                    <button class="certification-reaction-btn" data-reaction="love"
+                                        aria-label="Love this certification">
+                                        ❤️
+                                        <span class="certification-reaction-count">0</span>
+                                    </button>
+                                    <button class="certification-reaction-btn" data-reaction="wow"
+                                        aria-label="Amazing certification">
+                                        😮
+                                        <span class="certification-reaction-count">0</span>
+                                    </button>
+                                    <button class="certification-reaction-btn" data-reaction="rocket"
+                                        aria-label="Innovative certification">
+                                        🚀
+                                        <span class="certification-reaction-count">0</span>
+                                    </button>
+                                </div>
+                                <div class="certification-reaction-stats">
+                                    <span class="certification-reaction-total">0</span>
+                                    <span>reactions</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -2415,6 +2765,34 @@
                             <a href="https://www.skills.google/public_profiles/fe16fb51-f226-4f64-a6a6-172189ef45df/badges/19536991"
                                 class="certification-link" target="_blank" rel="noopener noreferrer">Verify Credential
                                 <i class="fas fa-external-link-alt"></i></a>
+                            <div class="certification-reactions" data-certification-id="data-analytics">
+                                <div class="certification-reaction-buttons">
+                                    <button class="certification-reaction-btn" data-reaction="like"
+                                        aria-label="Like this certification">
+                                        👍
+                                        <span class="certification-reaction-count">0</span>
+                                    </button>
+                                    <button class="certification-reaction-btn" data-reaction="love"
+                                        aria-label="Love this certification">
+                                        ❤️
+                                        <span class="certification-reaction-count">0</span>
+                                    </button>
+                                    <button class="certification-reaction-btn" data-reaction="wow"
+                                        aria-label="Amazing certification">
+                                        😮
+                                        <span class="certification-reaction-count">0</span>
+                                    </button>
+                                    <button class="certification-reaction-btn" data-reaction="rocket"
+                                        aria-label="Innovative certification">
+                                        🚀
+                                        <span class="certification-reaction-count">0</span>
+                                    </button>
+                                </div>
+                                <div class="certification-reaction-stats">
+                                    <span class="certification-reaction-total">0</span>
+                                    <span>reactions</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -2434,6 +2812,34 @@
                             <a href="https://www.credly.com/badges/8ba3d8bd-53ea-4a2e-b608-bf6fd8102790/public_url"
                                 class="certification-link" target="_blank" rel="noopener noreferrer">Verify Credential
                                 <i class="fas fa-external-link-alt"></i></a>
+                            <div class="certification-reactions" data-certification-id="ccna">
+                                <div class="certification-reaction-buttons">
+                                    <button class="certification-reaction-btn" data-reaction="like"
+                                        aria-label="Like this certification">
+                                        👍
+                                        <span class="certification-reaction-count">0</span>
+                                    </button>
+                                    <button class="certification-reaction-btn" data-reaction="love"
+                                        aria-label="Love this certification">
+                                        ❤️
+                                        <span class="certification-reaction-count">0</span>
+                                    </button>
+                                    <button class="certification-reaction-btn" data-reaction="wow"
+                                        aria-label="Amazing certification">
+                                        😮
+                                        <span class="certification-reaction-count">0</span>
+                                    </button>
+                                    <button class="certification-reaction-btn" data-reaction="rocket"
+                                        aria-label="Innovative certification">
+                                        🚀
+                                        <span class="certification-reaction-count">0</span>
+                                    </button>
+                                </div>
+                                <div class="certification-reaction-stats">
+                                    <span class="certification-reaction-total">0</span>
+                                    <span>reactions</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -2453,6 +2859,34 @@
                             <a href="https://www.credly.com/badges/de7add0f-60e9-4255-88e3-1b34cb837f9e/public_url"
                                 class="certification-link" target="_blank" rel="noopener noreferrer">Verify Credential
                                 <i class="fas fa-external-link-alt"></i></a>
+                            <div class="certification-reactions" data-certification-id="it-essentials">
+                                <div class="certification-reaction-buttons">
+                                    <button class="certification-reaction-btn" data-reaction="like"
+                                        aria-label="Like this certification">
+                                        👍
+                                        <span class="certification-reaction-count">0</span>
+                                    </button>
+                                    <button class="certification-reaction-btn" data-reaction="love"
+                                        aria-label="Love this certification">
+                                        ❤️
+                                        <span class="certification-reaction-count">0</span>
+                                    </button>
+                                    <button class="certification-reaction-btn" data-reaction="wow"
+                                        aria-label="Amazing certification">
+                                        😮
+                                        <span class="certification-reaction-count">0</span>
+                                    </button>
+                                    <button class="certification-reaction-btn" data-reaction="rocket"
+                                        aria-label="Innovative certification">
+                                        🚀
+                                        <span class="certification-reaction-count">0</span>
+                                    </button>
+                                </div>
+                                <div class="certification-reaction-stats">
+                                    <span class="certification-reaction-total">0</span>
+                                    <span>reactions</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -2473,6 +2907,34 @@
                             <a href="https://www.linkedin.com/in/godfrey-bwalya-875890271/details/certifications/"
                                 class="certification-link" target="_blank" rel="noopener noreferrer">View on LinkedIn <i
                                     class="fas fa-external-link-alt"></i></a>
+                            <div class="certification-reactions" data-certification-id="ndg-linux-essentials">
+                                <div class="certification-reaction-buttons">
+                                    <button class="certification-reaction-btn" data-reaction="like"
+                                        aria-label="Like this certification">
+                                        👍
+                                        <span class="certification-reaction-count">0</span>
+                                    </button>
+                                    <button class="certification-reaction-btn" data-reaction="love"
+                                        aria-label="Love this certification">
+                                        ❤️
+                                        <span class="certification-reaction-count">0</span>
+                                    </button>
+                                    <button class="certification-reaction-btn" data-reaction="wow"
+                                        aria-label="Amazing certification">
+                                        😮
+                                        <span class="certification-reaction-count">0</span>
+                                    </button>
+                                    <button class="certification-reaction-btn" data-reaction="rocket"
+                                        aria-label="Innovative certification">
+                                        🚀
+                                        <span class="certification-reaction-count">0</span>
+                                    </button>
+                                </div>
+                                <div class="certification-reaction-stats">
+                                    <span class="certification-reaction-total">0</span>
+                                    <span>reactions</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -2493,11 +2955,40 @@
                             <a href="https://www.linkedin.com/in/godfrey-bwalya-875890271/details/certifications/"
                                 class="certification-link" target="_blank" rel="noopener noreferrer">View on LinkedIn <i
                                     class="fas fa-external-link-alt"></i></a>
+                            <div class="certification-reactions" data-certification-id="ndg-linux-unhatched">
+                                <div class="certification-reaction-buttons">
+                                    <button class="certification-reaction-btn" data-reaction="like"
+                                        aria-label="Like this certification">
+                                        👍
+                                        <span class="certification-reaction-count">0</span>
+                                    </button>
+                                    <button class="certification-reaction-btn" data-reaction="love"
+                                        aria-label="Love this certification">
+                                        ❤️
+                                        <span class="certification-reaction-count">0</span>
+                                    </button>
+                                    <button class="certification-reaction-btn" data-reaction="wow"
+                                        aria-label="Amazing certification">
+                                        😮
+                                        <span class="certification-reaction-count">0</span>
+                                    </button>
+                                    <button class="certification-reaction-btn" data-reaction="rocket"
+                                        aria-label="Innovative certification">
+                                        🚀
+                                        <span class="certification-reaction-count">0</span>
+                                    </button>
+                                </div>
+                                <div class="certification-reaction-stats">
+                                    <span class="certification-reaction-total">0</span>
+                                    <span>reactions</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
         <!-- Projects Section -->
         <section id="projects" class="projects">
             <div class="container">
@@ -2527,7 +3018,32 @@
                                 <span class="tag">Directus API</span>
                                 <span class="tag">CSV Export</span>
                             </div>
+                            <div class="project-reactions" data-project-id="program-management">
+                                <div class="reaction-buttons">
+                                    <button class="reaction-btn" data-reaction="like" aria-label="Like this project">
+                                        👍
+                                        <span class="reaction-count">0</span>
+                                    </button>
+                                    <button class="reaction-btn" data-reaction="love" aria-label="Love this project">
+                                        ❤️
+                                        <span class="reaction-count">0</span>
+                                    </button>
+                                    <button class="reaction-btn" data-reaction="wow" aria-label="Amazing project">
+                                        😮
+                                        <span class="reaction-count">0</span>
+                                    </button>
+                                    <button class="reaction-btn" data-reaction="rocket" aria-label="Innovative project">
+                                        🚀
+                                        <span class="reaction-count">0</span>
+                                    </button>
+                                </div>
+                                <div class="reaction-stats">
+                                    <span class="reaction-total">0</span>
+                                    <span>reactions</span>
+                                </div>
+                            </div>
                         </div>
+
                     </div>
 
                     <!-- Project 2 -->
@@ -2553,6 +3069,30 @@
                                 <span class="tag">Role-Based Access</span>
                                 <span class="tag">PWA</span>
                             </div>
+                            <div class="project-reactions" data-project-id="literacy-tree">
+                                <div class="reaction-buttons">
+                                    <button class="reaction-btn" data-reaction="like" aria-label="Like this project">
+                                        👍
+                                        <span class="reaction-count">0</span>
+                                    </button>
+                                    <button class="reaction-btn" data-reaction="love" aria-label="Love this project">
+                                        ❤️
+                                        <span class="reaction-count">0</span>
+                                    </button>
+                                    <button class="reaction-btn" data-reaction="wow" aria-label="Amazing project">
+                                        😮
+                                        <span class="reaction-count">0</span>
+                                    </button>
+                                    <button class="reaction-btn" data-reaction="rocket" aria-label="Innovative project">
+                                        🚀
+                                        <span class="reaction-count">0</span>
+                                    </button>
+                                </div>
+                                <div class="reaction-stats">
+                                    <span class="reaction-total">0</span>
+                                    <span>reactions</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -2577,8 +3117,33 @@
                                 <span class="tag">Sensors</span>
                                 <span class="tag">Automation</span>
                             </div>
+                            <div class="project-reactions" data-project-id="arduino-smart-house">
+                                <div class="reaction-buttons">
+                                    <button class="reaction-btn" data-reaction="like" aria-label="Like this project">
+                                        👍
+                                        <span class="reaction-count">0</span>
+                                    </button>
+                                    <button class="reaction-btn" data-reaction="love" aria-label="Love this project">
+                                        ❤️
+                                        <span class="reaction-count">0</span>
+                                    </button>
+                                    <button class="reaction-btn" data-reaction="wow" aria-label="Amazing project">
+                                        😮
+                                        <span class="reaction-count">0</span>
+                                    </button>
+                                    <button class="reaction-btn" data-reaction="rocket" aria-label="Innovative project">
+                                        🚀
+                                        <span class="reaction-count">0</span>
+                                    </button>
+                                </div>
+                                <div class="reaction-stats">
+                                    <span class="reaction-total">0</span>
+                                    <span>reactions</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
                     <div class="project-card">
                         <div class="project-image">
                             <img src="https://res.cloudinary.com/dc8majybh/image/upload/v1762315838/light_bulb_iot_jkrodg.jpg"
@@ -2587,9 +3152,6 @@
                                 <a href="#" class="project-details-btn" data-project="iot-light-control"
                                     aria-label="View details for IoT Light Bulb Control System"><i
                                         class="fas fa-info-circle"></i></a>
-                                <!-- <a href="https://github.com/godfreybwalya/iot-light-control" target="_blank"
-                                    aria-label="View GitHub repository for IoT Light Bulb Control System"><i
-                                        class="fab fa-github"></i></a> -->
                             </div>
                         </div>
                         <div class="project-content">
@@ -2602,8 +3164,33 @@
                                 <span class="tag">Mobile App</span>
                                 <span class="tag">Automation</span>
                             </div>
+                            <div class="project-reactions" data-project-id="iot-light-control">
+                                <div class="reaction-buttons">
+                                    <button class="reaction-btn" data-reaction="like" aria-label="Like this project">
+                                        👍
+                                        <span class="reaction-count">0</span>
+                                    </button>
+                                    <button class="reaction-btn" data-reaction="love" aria-label="Love this project">
+                                        ❤️
+                                        <span class="reaction-count">0</span>
+                                    </button>
+                                    <button class="reaction-btn" data-reaction="wow" aria-label="Amazing project">
+                                        😮
+                                        <span class="reaction-count">0</span>
+                                    </button>
+                                    <button class="reaction-btn" data-reaction="rocket" aria-label="Innovative project">
+                                        🚀
+                                        <span class="reaction-count">0</span>
+                                    </button>
+                                </div>
+                                <div class="reaction-stats">
+                                    <span class="reaction-total">0</span>
+                                    <span>reactions</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
 
                     <!-- Project 4 -->
                     <div class="project-card">
@@ -2628,6 +3215,30 @@
                                 <span class="tag">Parallel Computing</span>
                                 <span class="tag">HPC</span>
                             </div>
+                            <div class="project-reactions" data-project-id="beowulf-cluster">
+                                <div class="reaction-buttons">
+                                    <button class="reaction-btn" data-reaction="like" aria-label="Like this project">
+                                        👍
+                                        <span class="reaction-count">0</span>
+                                    </button>
+                                    <button class="reaction-btn" data-reaction="love" aria-label="Love this project">
+                                        ❤️
+                                        <span class="reaction-count">0</span>
+                                    </button>
+                                    <button class="reaction-btn" data-reaction="wow" aria-label="Amazing project">
+                                        😮
+                                        <span class="reaction-count">0</span>
+                                    </button>
+                                    <button class="reaction-btn" data-reaction="rocket" aria-label="Innovative project">
+                                        🚀
+                                        <span class="reaction-count">0</span>
+                                    </button>
+                                </div>
+                                <div class="reaction-stats">
+                                    <span class="reaction-total">0</span>
+                                    <span>reactions</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -2639,9 +3250,6 @@
                                 <a href="#" class="project-details-btn" data-project="exam-security-system"
                                     aria-label="View details for Exam Security System"><i
                                         class="fas fa-info-circle"></i></a>
-                                <!-- <a href="https://github.com/godfreybwalya/exam-security-system" target="_blank"
-                aria-label="View GitHub repository for Exam Security System"><i
-                    class="fab fa-github"></i></a> -->
                             </div>
                         </div>
                         <div class="project-content">
@@ -2656,10 +3264,32 @@
                                 <span class="tag">Node.js</span>
                                 <span class="tag">AWS MySQL</span>
                             </div>
+                            <div class="project-reactions" data-project-id="exam-security-system">
+                                <div class="reaction-buttons">
+                                    <button class="reaction-btn" data-reaction="like" aria-label="Like this project">
+                                        👍
+                                        <span class="reaction-count">0</span>
+                                    </button>
+                                    <button class="reaction-btn" data-reaction="love" aria-label="Love this project">
+                                        ❤️
+                                        <span class="reaction-count">0</span>
+                                    </button>
+                                    <button class="reaction-btn" data-reaction="wow" aria-label="Amazing project">
+                                        😮
+                                        <span class="reaction-count">0</span>
+                                    </button>
+                                    <button class="reaction-btn" data-reaction="rocket" aria-label="Innovative project">
+                                        🚀
+                                        <span class="reaction-count">0</span>
+                                    </button>
+                                </div>
+                                <div class="reaction-stats">
+                                    <span class="reaction-total">0</span>
+                                    <span>reactions</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-                </div>
         </section>
 
         <!-- Testimonials Section -->
@@ -2874,6 +3504,8 @@
             initTypingEffect();
             initModal();
             initImageLoading();
+            initProjectReactions();
+            initCertificationReactions();
         });
 
         // Typing Effect
@@ -3283,6 +3915,203 @@
             }
         }
 
+        // Initialize Certification Reactions
+        function initCertificationReactions() {
+            const reactionContainers = document.querySelectorAll('.certification-reactions');
+
+            // Load reactions from localStorage
+            const savedReactions = JSON.parse(localStorage.getItem('certificationReactions') || '{}');
+
+            reactionContainers.forEach(container => {
+                const certificationId = container.dataset.certificationId;
+                const reactionButtons = container.querySelectorAll('.certification-reaction-btn');
+                const totalElement = container.querySelector('.certification-reaction-total');
+
+                // Initialize reactions for this certification if not exists
+                if (!savedReactions[certificationId]) {
+                    savedReactions[certificationId] = {
+                        like: 0,
+                        love: 0,
+                        wow: 0,
+                        rocket: 0,
+                        userReaction: null
+                    };
+                }
+
+                // Update UI with saved reactions
+                updateReactionUI(container, savedReactions[certificationId]);
+
+                // Add click handlers to reaction buttons
+                reactionButtons.forEach(button => {
+                    button.addEventListener('click', function () {
+                        const reaction = this.dataset.reaction;
+                        const currentReaction = savedReactions[certificationId].userReaction;
+
+                        // Remove previous reaction if exists
+                        if (currentReaction && currentReaction !== reaction) {
+                            savedReactions[certificationId][currentReaction]--;
+                        }
+
+                        // Toggle current reaction
+                        if (currentReaction === reaction) {
+                            // Remove reaction
+                            savedReactions[certificationId][reaction]--;
+                            savedReactions[certificationId].userReaction = null;
+                            this.classList.remove('active');
+                        } else {
+                            // Add reaction
+                            savedReactions[certificationId][reaction]++;
+                            savedReactions[certificationId].userReaction = reaction;
+                            this.classList.add('active');
+
+                            // Remove active class from other buttons
+                            reactionButtons.forEach(btn => {
+                                if (btn !== this) {
+                                    btn.classList.remove('active');
+                                }
+                            });
+                        }
+
+                        // Save to localStorage
+                        localStorage.setItem('certificationReactions', JSON.stringify(savedReactions));
+
+                        // Update UI
+                        updateReactionUI(container, savedReactions[certificationId]);
+
+                        // Add animation
+                        this.classList.add('active');
+                        setTimeout(() => {
+                            if (savedReactions[certificationId].userReaction !== reaction) {
+                                this.classList.remove('active');
+                            }
+                        }, 600);
+                    });
+                });
+            });
+
+            function updateReactionUI(container, reactions) {
+                const reactionButtons = container.querySelectorAll('.certification-reaction-btn');
+                const totalElement = container.querySelector('.certification-reaction-total');
+
+                // Update individual reaction counts
+                reactionButtons.forEach(button => {
+                    const reaction = button.dataset.reaction;
+                    const countElement = button.querySelector('.certification-reaction-count');
+                    countElement.textContent = reactions[reaction];
+
+                    // Update active state
+                    if (reactions.userReaction === reaction) {
+                        button.classList.add('active');
+                    } else {
+                        button.classList.remove('active');
+                    }
+                });
+
+                // Update total
+                const total = reactions.like + reactions.love + reactions.wow + reactions.rocket;
+                totalElement.textContent = total;
+            }
+        }
+
+        // Initialize Project Reactions
+        function initProjectReactions() {
+            const reactionContainers = document.querySelectorAll('.project-reactions');
+
+            // Load reactions from localStorage
+            const savedReactions = JSON.parse(localStorage.getItem('projectReactions') || '{}');
+
+            reactionContainers.forEach(container => {
+                const projectId = container.dataset.projectId;
+                const reactionButtons = container.querySelectorAll('.reaction-btn');
+                const totalElement = container.querySelector('.reaction-total');
+
+                // Initialize reactions for this project if not exists
+                if (!savedReactions[projectId]) {
+                    savedReactions[projectId] = {
+                        like: 0,
+                        love: 0,
+                        wow: 0,
+                        rocket: 0,
+                        userReaction: null
+                    };
+                }
+
+                // Update UI with saved reactions
+                updateReactionUI(container, savedReactions[projectId]);
+
+                // Add click handlers to reaction buttons
+                reactionButtons.forEach(button => {
+                    button.addEventListener('click', function () {
+                        const reaction = this.dataset.reaction;
+                        const currentReaction = savedReactions[projectId].userReaction;
+
+                        // Remove previous reaction if exists
+                        if (currentReaction && currentReaction !== reaction) {
+                            savedReactions[projectId][currentReaction]--;
+                        }
+
+                        // Toggle current reaction
+                        if (currentReaction === reaction) {
+                            // Remove reaction
+                            savedReactions[projectId][reaction]--;
+                            savedReactions[projectId].userReaction = null;
+                            this.classList.remove('active');
+                        } else {
+                            // Add reaction
+                            savedReactions[projectId][reaction]++;
+                            savedReactions[projectId].userReaction = reaction;
+                            this.classList.add('active');
+
+                            // Remove active class from other buttons
+                            reactionButtons.forEach(btn => {
+                                if (btn !== this) {
+                                    btn.classList.remove('active');
+                                }
+                            });
+                        }
+
+                        // Save to localStorage
+                        localStorage.setItem('projectReactions', JSON.stringify(savedReactions));
+
+                        // Update UI
+                        updateReactionUI(container, savedReactions[projectId]);
+
+                        // Add animation
+                        this.classList.add('active');
+                        setTimeout(() => {
+                            if (savedReactions[projectId].userReaction !== reaction) {
+                                this.classList.remove('active');
+                            }
+                        }, 600);
+                    });
+                });
+            });
+
+            function updateReactionUI(container, reactions) {
+                const reactionButtons = container.querySelectorAll('.reaction-btn');
+                const totalElement = container.querySelector('.reaction-total');
+
+                // Update individual reaction counts
+                reactionButtons.forEach(button => {
+                    const reaction = button.dataset.reaction;
+                    const countElement = button.querySelector('.reaction-count');
+                    countElement.textContent = reactions[reaction];
+
+                    // Update active state
+                    if (reactions.userReaction === reaction) {
+                        button.classList.add('active');
+                    } else {
+                        button.classList.remove('active');
+                    }
+                });
+
+                // Update total
+                const total = reactions.like + reactions.love + reactions.wow + reactions.rocket;
+                totalElement.textContent = total;
+            }
+        }
+
+
         // Skill bars animation
         function initSkillBars() {
             const skillBars = document.querySelectorAll('.skill-progress');
@@ -3473,7 +4302,7 @@
                     </ul>
                     
                     <h4>Technical Implementation:</h4>
-                    <p>Leveraged the JAM Stack architecture with React.js for the frontend, Node.js for backend services, and Directus as the headless CMS. Implemented efficient data handling patterns to ensure optimal performance even with large datasets.</p>
+                    <p>Leveraged JAM Stack architecture with React.js for frontend, Node.js for backend services, and Directus as headless CMS. Implemented efficient data handling patterns to ensure optimal performance even with large datasets.</p>
                     
                     <h4>Impact:</h4>
                     <p>The enhanced platform significantly improved user experience by making data more accessible and easier to analyze. The export feature enabled stakeholders to perform offline analysis, while the improved filtering system reduced time spent searching for specific information.</p>
@@ -3497,7 +4326,7 @@
                     </ul>
                     
                     <h4>Technical Implementation:</h4>
-                    <p>Built with React.js for the frontend, Node.js for the backend API, and RESTful API design. Implemented JWT authentication for secure access control and used a responsive design approach to ensure compatibility across devices.</p>
+                    <p>Built with React.js for frontend, Node.js for backend API, and RESTful API design. Implemented JWT authentication for secure access control and used a responsive design approach to ensure compatibility across devices.</p>
                     
                     <h4>Impact:</h4>
                     <p>The platform streamlined school operations by digitizing administrative processes, improving communication between staff and parents, and providing a centralized system for managing student information and academic records.</p>
@@ -3602,6 +4431,7 @@
                 }
             };
 
+
             // Add event listeners to project buttons
             document.querySelectorAll('.project-details-btn').forEach(button => {
                 button.addEventListener('click', (e) => {
@@ -3619,18 +4449,22 @@
             });
 
             // Close modal
-            closeModal.addEventListener('click', () => {
-                modal.classList.remove('show');
-                document.body.style.overflow = 'auto';
-            });
-
-            // Close modal when clicking outside content
-            modal.addEventListener('click', (e) => {
-                if (e.target === modal) {
+            if (closeModal) {
+                closeModal.addEventListener('click', () => {
                     modal.classList.remove('show');
                     document.body.style.overflow = 'auto';
-                }
-            });
+                });
+            }
+
+            // Close modal when clicking outside content
+            if (modal) {
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        modal.classList.remove('show');
+                        document.body.style.overflow = 'auto';
+                    }
+                });
+            }
 
             // Close modal with Escape key
             document.addEventListener('keydown', (e) => {
